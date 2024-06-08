@@ -3,7 +3,9 @@
 
 1. Dvorak
 2. Parentheses on the main level.  
-
+3. Layer toggles are one-shot toggles.
+4. One thumb has alt and meta, another one has layer modifiers. This is to be
+   able to press both modifier keys with one finger.
 
 # Flashing
 

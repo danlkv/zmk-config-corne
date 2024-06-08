@@ -68,18 +68,4 @@
                         >;
                 };
 
-                mod_layer {
-// -----------------------------------------------------------------------------------------
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | CTRL |  ^  |  `  |  `  |  @  |  %  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp LSHFT &trans     &trans &trans   &trans   &trans        &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-   &kp LCTRL &kp CARET   &kp GRAVE    &kp AT   &kp PRCNT       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans     &trans &trans   &trans   &trans        &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &trans
-                        >;
-                };
 };

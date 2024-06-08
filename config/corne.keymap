@@ -40,15 +40,14 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-
             // | TAB  |  "  |  :  |  <  |  >  |     |      |  -  |  7  |  8  |  9  |     |      |
             // | CTRL |  !  |  ,  |  [  |  ]  | BKSP|      |  -  |  4  |  5  |  6  |     |  `   |
             // | SHFT |  ?  |  ;  |  {  |  }  |     |      |  0  |  1  |  2  |  3  |     |  ~   |
             //                    | GUI |     | SPC |      | ENT |     | ALT |
             bindings = <
-                &kp TAB     &kp DQT    &kp COLON  &kp LT    &kp GT    &trans     &trans  &kp MINS  &kp N7  &kp N8  &kp N9  &trans  &trans
-                &kp LCTL    &kp EXCL   &kp COMM   &kp LBKT  &kp RBKT  &BSPC      &trans  &kp MINS  &kp N4  &kp N5  &kp N6  &trans  &kp GRAVE
-                &kp LSHFT   &kp QMAR   &kp SEMI   &kp LBRC  &kp RBRC  &trans     &trans  &kp N0    &kp N1  &kp N2  &kp N3  &trans  &kp TILD
+                &kp TAB     &kp DQT    &kp COLON  &kp LT    &kp GT    &trans     &trans  &kp MINUS &kp N7  &kp N8  &kp N9  &trans  &trans
+                &kp LCTL    &kp EXCL   &kp COMMA  &kp LBKT  &kp RBKT  &BSPC      &trans  &kp MINUS &kp N4  &kp N5  &kp N6  &trans  &kp GRAVE
+                &kp LSHFT   &kp QMARK  &kp SEMI   &kp LBRC  &kp RBRC  &trans     &trans  &kp N0    &kp N1  &kp N2  &kp N3  &trans  &kp TILD
 
                 &kp LGUI    &trans         &kp SPACE                             &kp RET     &trans      &kp LALT
             >;
@@ -61,10 +60,9 @@
 // | SHFT |  ~  |  *  |  $  |  &  |     |       | VOL+ | VOL- |     |     |     |      |
 //                    | GUI | ALT | SPC |       | ENT  |     |     |
             bindings = <
-                // Row 1
-                &kp TAB   &kp HASH  &kp PLUS  &kp PIPE  &kp BSLASH &trans     &trans &kp N6      &kp N7       &kp N8  &kp N9    &kp N0   &kp BSPC
-                &trans    &kp EQUAL &kp MINS  &kp UNDER &kp SLASH  &kp DEL    &trans &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT   &trans  &trans
-                &kp LSHFT &kp TILD  &kp ASTR  &kp DLAR  &kp AMPS   &trans     &trans &kp C_VOL_UP &kp C_VOL_DN &trans &trans &trans     &trans
+                &kp TAB   &kp HASH  &kp PLUS  &kp PIPE  &kp BSLH   &trans     &trans &kp N6      &kp N7       &kp N8  &kp N9    &kp N0   &kp BSPC
+                &trans    &kp EQUAL &kp MINUS &kp UNDER &kp SLASH  &kp DEL    &trans &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT   &trans  &trans
+                &kp LSHFT &kp TILD  &kp ASTRK &kp DLLR  &kp AMPS   &trans     &trans &kp C_VOL_UP &kp C_VOL_DN &trans &trans &trans     &trans
 
                 &kp LGUI    &RALT        &kp SPACE                             &kp RET     &trans       &trans
             >;

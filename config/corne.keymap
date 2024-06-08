@@ -15,12 +15,12 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  | BKSP |
-// | CTRL |  A  |  S  |  D  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  ESC   |
+// | CTRL |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |  ESC   |
 // | SHFT |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | SHFT  |
 //                    | GUI | LWR | RET |   | SPC | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp SEMI &kp COMMA &kp DOT &kp P &kp Y    &kp F &kp G  &kp C     &kp R   &kp L  &kp BSPC
-   &kp LCTRL &kp A    &kp S     &kp D   &kp U &kp I    &kp D &kp H  &kp T     &kp N   &kp S  &kp ESC
+   &kp LCTRL &kp A    &kp O     &kp E   &kp U &kp I    &kp D &kp H  &kp T     &kp N   &kp S  &kp ESC
    &kp LSHFT &kp SQT  &kp Q     &kp J   &kp K &kp X    &kp B &kp M  &kp W     &kp V   &kp Z  &kp RSHFT
 
                   &kp LGUI &mo 1 &kp RET               &kp SPACE &mo 2 &kp RALT

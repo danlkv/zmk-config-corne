@@ -51,7 +51,7 @@
 //                    | ALT | GUI | RET |   | SPC | LWR | RSE |
                         bindings = <
    &kp TAB     &kp SQT         &kp DOT   &kp LPAR &kp P &kp Y    &kp F &kp G  &kp C     &kp R   &kp L        &kp BSPC
-   &sl 1       &mt LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &mt RCTRL S  &lt 1
+   &sl 1       &mt LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &mt RCTRL S  &st 1
    &kp LSHFT   &mt LSHFT RPAR  &kp Q     &kp J    &kp K &kp X    &kp B &kp M  &kp W     &kp V   &mt RSHFT Z  &kp RSHFT
 
                   &kp LALT &kp LGUI &kp RET               &kp SPACE &sl 1 &sl 2

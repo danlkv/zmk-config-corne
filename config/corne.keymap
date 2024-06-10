@@ -12,6 +12,10 @@
     tapping-term-ms = <200>;
 };
 
+&lt {
+    tapping-term-ms = <300>;
+};
+
 // -- Sticky layer configuration
 &sl {
     release-after-ms = <1500>;
@@ -46,9 +50,9 @@
 // | SHFT | SHFT // )  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  SHFT // Z  | SHFT  |
 //                    | ALT | GUI | RET |   | SPC | LWR | RSE |
                         bindings = <
-   &kp TAB   &kp SQT         &kp DOT   &kp LPAR &kp P &kp Y    &kp F &kp G  &kp C     &kp R   &kp L        &kp BSPC
-   &kp LCTRL &mt LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &mt RCTRL S  &kp ESC
-   &kp LSHFT &mt LSHFT RPAR  &kp Q     &kp J    &kp K &kp X    &kp B &kp M  &kp W     &kp V   &mt RSHFT Z  &kp RSHFT
+   &kp TAB     &kp SQT         &kp DOT   &kp LPAR &kp P &kp Y    &kp F &kp G  &kp C     &kp R   &kp L        &kp BSPC
+   &lt 1 LCTRL &mt LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &mt RCTRL S  &lt 1 ESC
+   &kp LSHFT   &mt LSHFT RPAR  &kp Q     &kp J    &kp K &kp X    &kp B &kp M  &kp W     &kp V   &mt RSHFT Z  &kp RSHFT
 
                   &kp LALT &kp LGUI &kp RET               &kp SPACE &sl 1 &sl 2
                         >;
@@ -65,7 +69,7 @@
                 &kp LCTRL   &kp EXCL   &kp COMMA  &kp LBKT  &kp RBKT  &kp BSPC      &kp MINUS   &kp N4  &kp N5  &kp N6  &trans  &kp GRAVE
                 &kp LSHFT   &kp QMARK  &kp SEMI   &kp LBRC  &kp RBRC  &trans        &kp N0      &kp N1  &kp N2  &kp N3  &trans  &kp TILDE
 
-                &kp LGUI    &trans         &kp SPACE                             &kp RET     &trans      &kp LALT
+                &kp LGUI    &trans         &kp SPACE                             &kp RET     &sl 2      &kp LALT
             >;
         };
 

@@ -45,8 +45,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <500>;
-            bindings = <&lt>, <&tog>;
+            tapping-term-ms = <5000>; // Keymap: to abort the tap action, just tap the same key
+            bindings = <&mo>, <&tog>;
         };
     };
 

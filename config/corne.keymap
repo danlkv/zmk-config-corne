@@ -36,7 +36,7 @@
 };
 
 
-// -- Keymap configuration
+/ -- Keymap configuration
 
 / {
 
@@ -49,7 +49,7 @@
             bindings = <&mo>, <&to>;
 		};
 		hrm: home_row_modifiers {
-				compatible = "zmk, behavior-hold-tap";
+				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
 				flavor = "tap-preferred";
 				tapping-term-ms = <200>;
@@ -69,7 +69,7 @@
             //                    | ALT | GUI | SPC |   | RET | LWR | RSE |
             bindings = <
                 &kp TAB     &kp SQT         &kp DOT   &kp LPAR &kp P &kp Y    &kp F &kp G  &kp C     &kp R   &kp L        &kp BSPC
-                &tto 1 1       &hrm LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &hrm RCTRL S  &sl 1
+                &tto 1 1    &hrm LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &hrm RCTRL S  &sl 1
                 &kp LSHFT   &mt LSHFT RPAR  &kp Q     &kp J    &kp K &kp X    &kp B &kp M  &kp W     &kp V   &mt RSHFT Z  &kp RSHFT
 
                 &kp LALT &kp LGUI &kp SPACE               &kp RET &sl 1 &sl 2

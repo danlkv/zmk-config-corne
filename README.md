@@ -9,6 +9,8 @@
 
 # Flashing
 
+## Using gh actions
+
 1. Commit and push the changes
 2. `gh watch` to watch it compile
 3. `rm *uf2` to remove previous firmware files if any
@@ -17,6 +19,33 @@
 5. `sudo mount /dev/sdx /mnt/flash` to copy.
 6. Wait for the device to dissapear. Then flash the second one
 
+## Locally
+
+If you want to use custom features, e.g. [mouse
+control](https://github.com/zmkfirmware/zmk/pull/2027), you'll need to
+[build](https://zmk.dev/docs/development/setup/native) zmk. Then, use that to
+build the firmware.
+
+Dependencies:
+
+1. Cmake
+2. Ninja
+3. [Zephyr-sdk](https://docs.zephyrproject.org/3.5.0/develop/getting_started/index.html#install-zephyr-sdk)
+
+How to flash on Mac:
+
+```bash
+cd my_zmk_clone/app
+west build -p -d build/$side -b nice_nano_v2 -- -DSHIELD=corne_left -DZMK_CONFIG=$HOME/mycode/zmk-config-corne/config
+# connect the board and double-press the reset button
+cp build/$side/zephyr/zmk.uf2 /Volumes/NICENANO/
+```
+
+Helper script:
+
+[`local_build_flash.sh`](./local_build_flash.sh)
+
+# Layout notes
 
 ## Changes and insights
 

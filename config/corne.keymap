@@ -18,7 +18,7 @@
 
 // -- Sticky layer configuration
 &sl {
-    release-after-ms = <1500>;
+    release-after-ms = <1000>;
 };
 
 
@@ -45,17 +45,17 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <5000>; // Keymap: to abort the tap action, just tap the same key
+            tapping-term-ms = <5000>; 
             bindings = <&mo>, <&to>;
-		};
-		hrm: home_row_modifiers {
-				compatible = "zmk,behavior-hold-tap";
-				#binding-cells = <2>;
-				flavor = "tap-preferred";
-				tapping-term-ms = <200>;
-				require-prior-idle-ms = <100>;
-				bindings = <&kp>, <&kp>;
-		};
+        };
+        hrm: home_row_modifiers {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -69,7 +69,7 @@
             //                    | ALT | GUI | SPC |   | RET | LWR | RSE |
             bindings = <
                 &kp TAB     &kp SQT         &kp DOT   &kp LPAR &kp P &kp Y    &kp F &kp G  &kp C     &kp R   &kp L        &kp BSPC
-                &tto 1 1    &hrm LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &hrm RCTRL S  &sl 1
+                &sl 1    &hrm LCTRL A     &kp O     &kp E    &kp U &kp I    &kp D &kp H  &kp T     &kp N   &hrm RCTRL S  &sl 1
                 &kp LSHFT   &mt LSHFT RPAR  &kp Q     &kp J    &kp K &kp X    &kp B &kp M  &kp W     &kp V   &mt RSHFT Z  &kp RSHFT
 
                 &kp LALT &kp LGUI &kp SPACE               &kp RET &sl 1 &sl 2
@@ -77,30 +77,32 @@
         };
 
         raise_layer {
+            // -- 1 --
             // -----------------------------------------------------------------------------------------
             // | TAB  |  "  |  :  |  <  |  >  |     |      |  -  |  7  |  8  |  9  |     |      |
-            // | CTRL |  !  |  ,  |  [  |  ]  | BKSP|      |  -  |  4  |  5  |  6  |     |  `   |
+            // | CTRL |  !  |  ,  |  [  |  ]  | BKSP|      |  -  |  4  |  5  |  6  |     |  esc   |
             // | SHFT |  ?  |  ;  |  {  |  }  |     |      |  0  |  1  |  2  |  3  |     |  ~   |
             //                    | GUI |     | SPC |      | ENT |     | ALT |
             bindings = <
-                &kp TAB     &kp DQT    &kp COLON  &kp LT    &kp GT    &trans        &kp MINUS   &kp N7  &kp N8  &kp N9  &trans  &trans
+                &kp TAB     &kp DQT    &kp COLON  &kp LT    &kp GT    &trans        &kp MINUS   &kp N7  &kp N8  &kp N9  &trans  &to 2
                 &tto 2 0   &kp EXCL   &kp COMMA  &kp LBKT  &kp RBKT  &kp BSPC      &kp MINUS   &kp N4  &kp N5  &kp N6  &kp UNDER  &kp ESC
-                &kp LSHFT   &kp QMARK  &kp SEMI   &kp LBRC  &kp RBRC  &trans        &kp N0      &kp N1  &kp N2  &kp N3  &trans  &kp TILDE
+                &kp LSHFT   &kp QMARK  &kp SEMI   &kp LBRC  &kp RBRC  &trans        &kp N0      &kp N1  &kp N2  &kp N3  &kp N0  &kp TILDE
 
                 &kp LGUI    &trans         &kp SPACE                             &kp RET     &sl 2      &sl 1
             >;
         };
 
         lower_layer {
+            // -- 2 --
             // -----------------------------------------------------------------------------------------
             // |  TAB |  #  |  +  |  |  |  \  |     |       |  6   |  7  |  8  |  9  |  0  | BKSP |
             // |      |  =  |  -  |  _  |  /  | DEL |       | LFT  | DWN |  UP | RGT |     |      |
             // | SHFT |  ~  |  *  |  $  |  &  |     |       | VOL+ | VOL- |     |     |     |      |
             //                    | GUI | ALT | SPC |       | ENT  |     |     |
             bindings = <
-                &kp TAB   &kp HASH  &kp PLUS  &kp PIPE  &kp BSLH   &trans        &kp N6       &kp N7       &kp N8  &kp N9    &kp N0   &kp BSPC
-                &trans    &kp EQUAL &kp MINUS &kp UNDER &kp SLASH  &kp DEL       &kp LEFT     &kp DOWN     &kp UP  &kp RIGHT   &trans  &trans
-                &kp LSHFT &kp TILDE  &kp ASTRK &kp DLLR  &kp AMPS   &trans       &kp C_VOL_UP &kp C_VOL_DN &trans &trans &trans     &trans
+                &kp TAB   &kp HASH  &kp PLUS  &kp PIPE  &kp BSLH   &trans        &kp N6       &kp N7       &kp N8  &kp N9    &kp N0   &to 1
+                &tto 1 0    &kp EQUAL &kp MINUS &kp UNDER &kp SLASH  &kp DEL       &kp LEFT     &kp DOWN     &kp UP  &kp RIGHT   &trans  &trans
+                &kp LSHFT &kp TILDE  &kp ASTRK &kp DLLR  &kp AMPS   &trans       &kp C_VOL_UP &kp C_VOL_DN &trans  &kp C_BRI_INC     &kp C_BRI_DEC   &trans
 
                 &kp LALT    &kp LGUI        &kp SPACE                             &kp RET     &trans       &trans
             >;

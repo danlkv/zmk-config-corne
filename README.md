@@ -32,6 +32,14 @@ Dependencies:
 2. Ninja
 3. [Zephyr-sdk](https://docs.zephyrproject.org/3.5.0/develop/getting_started/index.html#install-zephyr-sdk)
 
+### Local dependency install
+
+```bash
+git clone https://github.com/zmkfirmware/zmk.git --depth 1
+west update --fetch-opt=--filter=tree:0
+```
+### Building ang flashing
+
 How to flash on Mac:
 
 ```bash
